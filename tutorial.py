@@ -6,22 +6,16 @@ app = Flask(__name__)
 # def home():
 #     return "Hello! this is the main page <h1>HELLO</h1>"
 
-
 #homepage wih html template
 @app.route("/")
 def home():
     return render_template("index.html")
 
-@app.route("/<usr>")
-def user(usr):
-    return "<h1> {usr} <!h1>"
 
+# @app.route("/<usr>")
+# def user(usr):
+#     return "<h1> {usr} <!h1>"
 
-
-#homepage pass ref
-# @app.route("/<name>")
-# def home(name):
-#     return render_template("index.html", content=name)
 
 # #new page
 # @app.route("/<name>")
