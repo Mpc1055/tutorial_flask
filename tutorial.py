@@ -6,21 +6,15 @@ app = Flask(__name__)
 # def home():
 #     return "Hello! this is the main page <h1>HELLO</h1>"
 
+
 #homepage wih html template
 @app.route("/")
 def home():
     return render_template("index.html")
 
-@app.route("/login", methods=["POST", "GET"])
-def login():
-    return render_template("login.html")
-
 @app.route("/<usr>")
 def user(usr):
     return "<h1> {usr} <!h1>"
-
-
-
 
 
 
@@ -29,11 +23,11 @@ def user(usr):
 # def home(name):
 #     return render_template("index.html", content=name)
 
-
 # #new page
 # @app.route("/<name>")
 # def user(name):
 #     return "Hello %s!" %(name)
+
 
 # # redirect example
 # @app.route("/admin")
@@ -42,4 +36,4 @@ def user(usr):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
